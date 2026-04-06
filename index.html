@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Amr Ahmed Osman — Biomedical Engineer specializing in medical device maintenance, rehabilitation engineering, and AI-driven healthcare innovation. Based in Abu Dhabi, UAE." />
+  <meta name="keywords"
+    content="Biomedical Engineer, Medical Device, MedTech, Rehabilitation, UAE, Amr Ahmed Osman, UTM" />
+  <meta property="og:title" content="Amr Ahmed Osman | Biomedical Engineer" />
+  <meta property="og:description"
+    content="Biomedical Engineer | MedTech Innovator — Building healthcare technology and AI-driven innovation." />
+  <title>Amr Ahmed Osman | Biomedical Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-inner">
+      <svg class="ecg-loader" viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polyline class="ecg-line-anim"
+          points="0,30 30,30 45,10 55,50 65,5 75,55 85,30 120,30 135,30 150,10 160,50 170,5 180,55 190,30 300,30"
+          stroke="#4A90E2" stroke-width="2" fill="none" />
+      </svg>
+      <p class="loader-text">Initializing</p>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand">AAO</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="./pdf/CV_Amr_Ahmed.pdf" class="nav-cta" target="_blank" download>Download CV</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#volunteering">Volunteering</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <canvas id="ecgCanvas"></canvas>
+    <div class="hero-layout">
+      <div class="hero-content">
+        <div class="hero-badge reveal-up">
+          <span class="badge-dot"></span>
+          Biomedical Engineer · MedTech Innovator
+        </div>
+        <h1 class="hero-name reveal-up delay-1">
+          Amr Ahmed<br />
+          <span class="hero-name-accent">Osman</span>
+        </h1>
+        <p class="hero-sub reveal-up delay-2">
+          Building healthcare technology, rehabilitation systems, and AI-driven innovation at the intersection of
+          engineering, medicine, and human potential.
+        </p>
+        <div class="hero-ctas reveal-up delay-3">
+          <a href="#projects" class="btn-primary" id="heroExploreBtn">Explore Projects</a>
+          <a href="./pdf/CV_Amr_Ahmed.pdf" class="btn-secondary" target="_blank" download id="heroDownloadBtn">Download CV</a>
+        </div>
+        <div class="hero-stats reveal-up delay-4">
+          <div class="hero-stat">
+            <div class="stat-row"><span class="stat-num" data-target="300">0</span><span class="stat-plus">+</span>
+            </div>
+            <small>Clinical Hours</small>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <div class="stat-row"><span class="stat-num" data-target="80">0</span><span class="stat-plus">+</span></div>
+            <small>Devices Serviced</small>
+          </div>
+          <div class="hero-divider"></div>
+          <div class="hero-stat">
+            <div class="stat-row"><span class="stat-num" data-target="5">0</span><span class="stat-plus">×</span></div>
+            <small>Dean's List</small>
+          </div>
+        </div>
+      </div>
+      <div class="hero-portrait-wrap reveal-right delay-2">
+        <div class="hero-portrait-frame">
+          <img src="./images/my picture.jpg" alt="Amr Ahmed Osman — Biomedical Engineer" class="hero-portrait-img" />
+          <div class="portrait-badge">
+            <span class="portrait-badge-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+            <div>
+              <strong>UTM Graduate</strong>
+              <span>BEng(Hons) Biomedical · CGPA 3.42</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT / STORY -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label reveal-up">Professional Story</div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-title reveal-up">From the clinic floor<br />to cutting-edge innovation.</h2>
+          <div class="story-chapters">
+            <div class="story-chapter reveal-up">
+              <div class="chapter-marker">01</div>
+              <div class="chapter-body">
+                <h3>The Foundation</h3>
+                <p>Trained at Universiti Teknologi Malaysia (UTM) in a rigorous biomedical engineering curriculum
+                  spanning medical device design, biomaterials, electronics, and clinical engineering. Graduating with
+                  a CGPA of 3.42, earning Dean's List recognition five times across my degree.</p>
+              </div>
+            </div>
+            <div class="story-chapter reveal-up">
+              <div class="chapter-marker">02</div>
+              <div class="chapter-body">
+                <h3>The Clinical Immersion</h3>
+                <p>Over 300 hours inside SEHA hospitals, Al Ain Hospital and Tawam Hospital, performing hands-on
+                  maintenance on 80+ medical devices including defibrillators, patient monitors, incubators, and
+                  mattress pumps. Conducting electrical safety testing with Rigel ESA, Fluke ESA615, and defibrillator
+                  analyzers to IEC 60601 standards.</p>
+              </div>
+            </div>
+            <div class="story-chapter reveal-up">
+              <div class="chapter-marker">03</div>
+              <div class="chapter-body">
+                <h3>The Innovation Drive</h3>
+                <p>Alongside clinical work, I pursued engineering innovation through two major projects: a gamified
+                  rehabilitation glove that improved finger mobility by 40% within two weeks,
+                  and fast-dissolving electrospun nanofiber scaffolds for dermal regeneration, developed as my awarded
+                  Final Year Project.
+                  The nanofiber research was recognised at UTM’s 7th International Innovation Day (Limitless 2025), while the
+                  rehabilitation glove was showcased at the 8th Electrical Engineering Capstone Showcase.</p>
+              </div>
+            </div>
+            <div class="story-chapter reveal-up">
+              <div class="chapter-marker">04</div>
+              <div class="chapter-body">
+                <h3>The Builder Today</h3>
+                <p>Currently working as Accounts & Client Services Coordinator at The Perfix while leveraging my
+                  biomedical foundation. Coordinating technical projects, client relations, and event operations across
+                  the UAE. Leading prosthetics design initiatives for children in Palestine through UTM Bionic Club, and
+                  mentoring engineering students in Fusion 360, 3D printing, and electrical safety.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-side">
+          <div class="about-card glass-card reveal-right">
+            <div class="about-card-label">Academic Excellence</div>
+            <div class="edu-block">
+              <div class="edu-logo">UTM</div>
+              <div class="edu-info">
+                <strong>Universiti Teknologi Malaysia</strong>
+                <span>Bachelor of Biomedical Engineering (Hons)</span>
+                <span class="edu-dates">Oct 2021 – Jul 2025 · Johor, Malaysia</span>
+                <div class="edu-meta">
+                  <span class="edu-tag">CGPA 3.42 / 4.00</span>
+                  <span class="edu-tag">5× Dean's List</span>
+                </div>
+                <p class="edu-fyp"><strong>FYP:</strong> Electrospun PVA/Guar Gum Nanofibers for Dermis Regeneration</p>
+                <p class="edu-ielts">IELTS Academic: 7.5 Overall (C1) · Feb 2026</p>
+              </div>
+            </div>
+          </div>
+          <div class="utm-image-wrap reveal-right delay-1">
+            <img src="./images/utm-campus.png" alt="Universiti Teknologi Malaysia campus aerial view"
+              class="utm-campus-img" />
+            <div class="utm-img-caption">Universiti Teknologi Malaysia · Johor, Malaysia</div>
+          </div>
+          <div class="about-metrics-mini">
+            <div class="mini-metric">
+              <strong>3.95</strong>
+              <span>Best Semester GPA</span>
+            </div>
+            <div class="mini-metric">
+              <strong><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></strong>
+              <span>2nd Place, Innovation Day 2025</span>
+            </div>
+            <div class="mini-metric">
+              <strong>IELTS</strong>
+              <span>7.5 · C1 Academic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label reveal-up">Engineering Work</div>
+      <h2 class="section-title reveal-up">Featured Projects</h2>
+      <p class="section-sub reveal-up">Two award-recognised engineering projects, each addressing a real clinical gap
+        with precision-built solutions.</p>
+    </div>
+
+    <!-- PROJECT 1 -->
+    <div class="project-block" id="proj1">
+      <div class="project-number">01</div>
+      <div class="container">
+        <div class="project-inner">
+          <div class="project-text">
+            <div class="project-tag">Capstone Project · Rehabilitation Engineering · Wearable Tech</div>
+            <h3 class="project-title reveal-up">PulsePlay —<br />Gamified Rehabilitation Glove</h3>
+            <div class="project-period reveal-up">Oct 2024 – Jul 2025</div>
+            <div class="project-flow">
+              <div class="flow-step reveal-up">
+                <div class="flow-label">Problem</div>
+                <p>Patients recovering from hand injuries or neurological conditions lack engaging, trackable tools for
+                  home-based rehabilitation. Conventional gloves offer no adaptive feedback, no measurable outcomes, and
+                  low adherence rates.</p>
+              </div>
+              <div class="flow-step reveal-up">
+                <div class="flow-label">Engineering Approach</div>
+                <p>Developed a rhythm-based therapy glove with adjustable difficulty levels and a gamified interface
+                  designed for home use. Integrating sensor feedback with game mechanics transformed repetitive
+                  rehabilitation exercises into an engaging, data-driven experience.</p>
+              </div>
+              <div class="flow-step reveal-up">
+                <div class="flow-label">Validated Results</div>
+                <p>Achieved a <strong>40% improvement in finger mobility</strong> within just 2 weeks of testing, a
+                  clinically meaningful outcome that demonstrates the device's potential for accelerating functional
+                  recovery.</p>
+              </div>
+              <div class="flow-step reveal-up">
+                <div class="flow-label">Recognition</div>
+                <p>Awarded <strong>Biomedical Best Project Award</strong> at the <strong>8th Electrical Engineering Capstone Showcase 2025</strong>. Recognised for clinical relevance, engineering quality, and innovation value.</p>
+              </div>
+            </div>
+            
+            <div class="reveal-up" style="margin-top: 2rem;">
+              <a href="https://youtu.be/bUXA00YTL2s?si=wFYD1QYFpkfN89_i" target="_blank" rel="noopener" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 1px;"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                See Device in Action
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-card glass-card reveal-right">
+              <div class="project-emoji"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 7.5a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M10 5.5a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M6 10a2 2 0 0 0-2 2v10a8 8 0 0 0 12.3-6.9L18 11Z"/></svg></div>
+              <div class="project-metrics-grid">
+                <div class="p-metric">
+                  <strong>40%</strong>
+                  <span>Mobility Gain</span>
+                </div>
+                <div class="p-metric">
+                  <strong>2 wks</strong>
+                  <span>Testing Period</span>
+                </div>
+                <div class="p-metric">
+                  <strong><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></strong>
+                  <span>Best Capstone</span>
+                </div>
+                <div class="p-metric">
+                  <strong>Home</strong>
+                  <span>Use Ready</span>
+                </div>
+              </div>
+              <div class="tech-chips">
+                <span>Arduino</span><span>Flex
+                  Sensors</span><span>Gamification</span><span>Wearable</span><span>Rehabilitation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="project-block alt" id="proj2">
+      <div class="project-number">02</div>
+      <div class="container">
+        <div class="project-inner">
+          <div class="project-text">
+            <div class="project-tag">Final Year Project · Biomaterials · Tissue Engineering · Electrospinning</div>
+            <h3 class="project-title reveal-up">Electrospun PVA/Guar Gum<br />Nanofibers for Dermis Regeneration</h3>
+            <div class="project-period reveal-up">Oct 2024 – Jul 2025</div>
+            <div class="project-flow">
+              <div class="flow-step reveal-up">
+                <div class="flow-label">Problem</div>
+                <p>Wound dressings for dermal regeneration often cause secondary injury during removal, are poorly
+                  optimised for moisture management, and lack the precision drug-delivery architecture needed to support
+                  effective tissue healing.</p>
+              </div>
+              <div class="flow-step reveal-up">
+                <div class="flow-label">Engineering Approach</div>
+                <p>Created electrospun nanofiber membranes specifically optimised for moisture retention and wound
+                  healing. Engineered scaffold architecture to support cell adhesion and dermal regeneration while
+                  eliminating painful removal, a critical driver of patient compliance.</p>
+              </div>
+              <div class="flow-step reveal-up">
+                <div class="flow-label">Validated Results</div>
+                <p>Scaffolds achieved <strong>full dissolution in under 60 seconds</strong>, significantly enhancing
+                  dressing usability and eliminating the need for mechanical removal. Physicochemical characterisation
+                  confirmed optimal fibre morphology and moisture retention properties.</p>
+              </div>
+              <div class="flow-step reveal-up">
+                <div class="flow-label">Recognition</div>
+                <p>Awarded <strong>2nd Place, Best Overall FYP2 Project</strong> at the <strong>7th International Innovation Day (Limitless 2025)</strong>. Recognised for its translational clinical value and precision engineering
+                  methodology.</p>
+              </div>
+            </div>
+            
+            <div class="reveal-up" style="margin-top: 2rem;">
+              <a href="./pdf/FYP Poster.pdf" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top: 1px;"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                View FYP Poster
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-card glass-card reveal-right">
+              <div class="project-emoji"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.598 3-4.111 3-7.25C12 11.607 10.798 9.094 9 7.5"/><path d="M15 2c-1.798 1.598-3 4.111-3 7.25C12 12.393 13.202 14.906 15 16.5"/><path d="M7 11h10"/><path d="M7 15h10"/><path d="M7 19h10"/><path d="M7 23h10"/></svg></div>
+              <div class="project-metrics-grid">
+                <div class="p-metric">
+                  <strong>&lt;60s</strong>
+                  <span>Dissolution</span>
+                </div>
+                <div class="p-metric">
+                  <strong>SEM</strong>
+                  <span>Characterised</span>
+                </div>
+                <div class="p-metric">
+                  <strong><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 4v8l4 2"/></svg></strong>
+                  <span>UTM Innovation Day</span>
+                </div>
+                <div class="p-metric">
+                  <strong>FYP</strong>
+                  <span>Award Winner</span>
+                </div>
+              </div>
+              <div class="tech-chips">
+                <span>Electrospinning</span><span>Biomaterials</span><span>SEM</span><span>ImageJ</span><span>Dermal
+                  Regen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE TIMELINE -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label reveal-up">Career Path</div>
+      <h2 class="section-title reveal-up">Professional Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-node"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-period">Mar 2026 – Present</div>
+            <h4>Accounts &amp; Client Services Coordinator</h4>
+            <div class="timeline-org">The Perfix · Al Ain / Abu Dhabi, UAE</div>
+            <ul class="timeline-bullets">
+              <li>Prepared quotations, invoices, and account documents with accuracy and timely follow-up.</li>
+              <li>Coordinated with clients including Al Ain FC on branding assets, logos, and event requirements —
+                including support for the Hafeet Sport Challenge 2026.</li>
+              <li>Provided client service and administrative support for events such as Ghaitah 2026, ensuring clear
+                communication and organized execution.</li>
+            </ul>
+            <div class="timeline-tags"><span>Client Services</span><span>Account Management</span><span>Event
+                Coordination</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-node"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-period">Dec 2024 – Jan 2025</div>
+            <h4>Event Operations Crew</h4>
+            <div class="timeline-org">Vibes Events – Mother of the Nation (MOTN) · Abu Dhabi, UAE</div>
+            <ul class="timeline-bullets">
+              <li>Supported venue operations and visitor experience across multiple gates in a high-traffic festival and
+                concert environment.</li>
+              <li>Managed coordination between security and operations teams to maintain smooth transitions and safety
+                compliance.</li>
+              <li>Reported and escalated operational issues quickly to reduce delays and improve visitor flow.</li>
+            </ul>
+            <div class="timeline-tags"><span>Event Operations</span><span>Venue Management</span><span>Safety
+                Compliance</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-node"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-period">Nov 2024 – Dec 2024</div>
+            <h4>Event Operations Crew</h4>
+            <div class="timeline-org">Vibes Events – Mother of the Nation (MOTN) · Al Ain, UAE</div>
+            <ul class="timeline-bullets">
+              <li>Assisted hundreds of daily visitors with directions, inquiries, and event services in a high-traffic
+                environment.</li>
+              <li>Supported event operations, guest assistance, and queue and crowd flow during peak hours.</li>
+              <li>Coordinated with security, logistics, and vendor teams to ensure smooth activations and timely issue
+                resolution.</li>
+            </ul>
+            <div class="timeline-tags"><span>Guest Services</span><span>Crowd Management</span><span>Team
+                Coordination</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-node highlight"></div>
+          <div class="timeline-content glass-card featured">
+            <div class="timeline-period">Jul 2024 – Oct 2024</div>
+            <h4>Biomedical Engineering Intern</h4>
+            <div class="timeline-org">SEHA – Al Ain Hospital &amp; Tawam Hospital · UAE</div>
+            <ul class="timeline-bullets">
+              <li>Communicated technical information clearly to hospital staff and clinicians.</li>
+              <li>Performed maintenance on <strong>80+ medical devices</strong> including defibrillators, patient
+                monitors, incubators, and mattress pumps.</li>
+              <li>Conducted electrical safety testing using Rigel ESA, Fluke ESA615, and defibrillator analyzers in
+                compliance with IEC 60601.</li>
+              <li>Diagnosed equipment faults and coordinated timely repair to minimize downtime across clinical
+                departments.</li>
+            </ul>
+            <div class="timeline-tags"><span>Medical Device Maintenance</span><span>Electrical Safety
+                Testing</span><span>IEC 60601</span><span>Rigel ESA</span><span>Fluke ESA615</span></div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal-up">
+          <div class="timeline-node"></div>
+          <div class="timeline-content glass-card">
+            <div class="timeline-period">Feb 2024 – Mar 2024</div>
+            <h4>Biomedical Engineering Intern</h4>
+            <div class="timeline-org">Czech Rehabilitation Hospital · Al Ain, UAE</div>
+            <ul class="timeline-bullets">
+              <li>Observed rehabilitation equipment management and clinical workflows in an active hospital setting.
+              </li>
+              <li>Shadowed senior biomedical engineers and studied protocol-based maintenance procedures.</li>
+            </ul>
+            <div class="timeline-tags"><span>Rehabilitation Engineering</span><span>Clinical
+                Observation</span><span>Maintenance Protocols</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VOLUNTEERING & LEADERSHIP -->
+  <section id="volunteering">
+    <div class="container">
+      <div class="section-label reveal-up">Community & Leadership</div>
+      <h2 class="section-title reveal-up">Volunteering &amp; Extracurricular</h2>
+      <div class="vol-grid">
+
+        <div class="vol-card glass-card reveal-up">
+          <div class="vol-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 7.5a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M10 5.5a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M6 10a2 2 0 0 0-2 2v10a8 8 0 0 0 12.3-6.9L18 11Z"/></svg></div>
+          <div class="vol-body">
+            <h4>Head of Inventory Department</h4>
+            <div class="vol-org">UTM Bionic Club · Universiti Teknologi Malaysia</div>
+            <div class="vol-period">Oct 2023 – Present</div>
+            <p>Led prosthetics design initiatives for children in Palestine. Managed inventory and resources for bionic
+              projects and mentored peers in assistive technology design.</p>
+          </div>
+        </div>
+
+        <div class="vol-card glass-card reveal-up delay-1">
+          <div class="vol-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+          <div class="vol-body">
+            <h4>Cultural &amp; Logistics Committee Member</h4>
+            <div class="vol-org">ISS-EGYPT · Universiti Teknologi Malaysia</div>
+            <div class="vol-period">Mar 2022 – Feb 2025</div>
+            <p>Cultural Committee (Oct 2023 – Feb 2025) and Logistics Committee (Mar 2022 – Jul 2023). Organised
+              Egyptian cultural events and student activities at UTM.</p>
+          </div>
+        </div>
+
+        <div class="vol-card glass-card reveal-up delay-2">
+          <div class="vol-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="vol-body">
+            <h4>Electrical Safety Teacher</h4>
+            <div class="vol-org">UTM · Skudai, Malaysia</div>
+            <div class="vol-period">Jun 2023 – Jul 2023</div>
+            <p>Facilitated hands-on workshops on electrical safety fundamentals, Fusion 360 CAD, and 3D printing for
+              engineering students.</p>
+          </div>
+        </div>
+
+        <div class="vol-card glass-card reveal-up delay-3">
+          <div class="vol-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+          <div class="vol-body">
+            <h4>Event Volunteer</h4>
+            <div class="vol-org">Emirati Marshals · Al Ain, UAE</div>
+            <div class="vol-period">2019 – 2024</div>
+            <p>Contributed as an event marshal across multiple community and national events in Al Ain over five years
+              of continuous volunteering.</p>
+          </div>
+        </div>
+
+        <div class="vol-card glass-card reveal-up delay-4">
+          <div class="vol-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></div>
+          <div class="vol-body">
+            <h4>Volunteer Member</h4>
+            <div class="vol-org">Red Crescent Society · GIPA, Al Ain, UAE</div>
+            <div class="vol-period">2017 – 2019</div>
+            <p>Participated in humanitarian outreach programmes and community health awareness campaigns organised by
+              the Red Crescent Society.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- METRICS / ACHIEVEMENTS -->
+  <section id="metrics">
+    <div class="container">
+      <div class="section-label reveal-up">Impact by Numbers</div>
+      <h2 class="section-title reveal-up">Achievements &amp; Metrics</h2>
+      <div class="metrics-grid">
+        <div class="metric-card glass-card reveal-up">
+          <div class="metric-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg></div>
+          <div class="metric-value"><span class="counter" data-target="300">0</span><span class="metric-unit">+</span>
+          </div>
+          <div class="metric-label">Clinical Hours</div>
+          <div class="metric-desc">Hands-on experience inside SEHA hospitals across biomedical engineering departments
+          </div>
+        </div>
+        <div class="metric-card glass-card reveal-up delay-1">
+          <div class="metric-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+          <div class="metric-value"><span class="counter" data-target="80">0</span><span class="metric-unit">+</span>
+          </div>
+          <div class="metric-label">Medical Devices Serviced</div>
+          <div class="metric-desc">Defibrillators, monitors, incubators, and mattress pumps maintained to IEC 60601
+            standards</div>
+        </div>
+        <div class="metric-card glass-card reveal-up delay-2">
+          <div class="metric-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
+          <div class="metric-value"><span class="counter" data-target="40">0</span><span class="metric-unit">%</span>
+          </div>
+          <div class="metric-label">Finger Mobility Improvement</div>
+          <div class="metric-desc">Measured outcome from PulsePlay Rehabilitation Glove within 2 weeks of testing</div>
+        </div>
+        <div class="metric-card glass-card reveal-up delay-3">
+          <div class="metric-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div class="metric-value"><span class="counter" data-target="5">0</span><span class="metric-unit">×</span>
+          </div>
+          <div class="metric-label">Dean's List</div>
+          <div class="metric-desc">Academic excellence across the biomedical engineering degree at UTM (GPA up to 3.95)
+          </div>
+        </div>
+      </div>
+
+      <div class="achievements-row">
+        <div class="section-label reveal-up" style="margin-top:3rem;">Recognitions</div>
+        <div class="achievements-list">
+          <div class="achievement-item reveal-up">
+            <div class="ach-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 4v8l4 2"/></svg></div>
+            <div class="ach-body">
+              <strong>2nd Place Best Overall FYP2 Project</strong>
+              <span>7th International Innovation Day (Limitless 2025) · UTM</span>
+            </div>
+          </div>
+          <div class="achievement-item reveal-up delay-1">
+            <div class="ach-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></div>
+            <div class="ach-body">
+              <strong>Biomedical Best Project Award</strong>
+              <span>8th Electrical Engineering Capstone Showcase 2025 · UTM</span>
+            </div>
+          </div>
+          <div class="achievement-item reveal-up delay-2">
+            <div class="ach-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div>
+            <div class="ach-body">
+              <strong>Dean's List (5×) — GPA up to 3.95</strong>
+              <span>Universiti Teknologi Malaysia · 2021–2025</span>
+            </div>
+          </div>
+          <div class="achievement-item reveal-up delay-3">
+            <div class="ach-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 7.5a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M10 5.5a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M6 10a2 2 0 0 0-2 2v10a8 8 0 0 0 12.3-6.9L18 11Z"/></svg></div>
+            <div class="ach-body">
+              <strong>Led Prosthetics Design for Children in Palestine</strong>
+              <span>UTM Bionic Club — Head of Inventory Department</span>
+            </div>
+          </div>
+          <div class="achievement-item reveal-up delay-4">
+            <div class="ach-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <div class="ach-body">
+              <strong>Mentored Workshops: Fusion 360, 3D Printing &amp; Electrical Safety</strong>
+              <span>UTM · Skudai, Malaysia · Jun–Jul 2023</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CERTIFICATE GALLERY -->
+        <div class="section-label reveal-up" style="margin-top:4rem;">Certificates</div>
+        <div class="certificate-gallery">
+          <div class="cert-card reveal-up">
+            <a href="./images/FYP.jpeg" target="_blank" class="cert-image-link" aria-label="View larger FYP Certificate">
+              <div class="cert-img-wrapper">
+                <img src="./images/FYP.jpeg" alt="2nd Place FYP Certificate" class="cert-img" />
+              </div>
+            </a>
+            <div class="cert-info">
+              <h4 class="cert-title">2nd Place — Best Overall FYP2 Project</h4>
+              <p class="cert-subtitle">7th International Innovation Day - Limitless 2025, UTM Johor Bahru</p>
+            </div>
+          </div>
+          <div class="cert-card reveal-up delay-1">
+            <a href="./images/capstone.jpeg" target="_blank" class="cert-image-link" aria-label="View larger Capstone Certificate">
+              <div class="cert-img-wrapper">
+                <img src="./images/capstone.jpeg" alt="Biomedical Best Project Award Certificate" class="cert-img" />
+              </div>
+            </a>
+            <div class="cert-info">
+              <h4 class="cert-title">Biomedical Best Project Award</h4>
+              <p class="cert-subtitle">8th Electrical Engineering Capstone Showcase 2025</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-label reveal-up">Capabilities</div>
+      <h2 class="section-title reveal-up">Skills &amp; Tools</h2>
+      <div class="skills-domains">
+
+        <div class="skill-domain reveal-up">
+          <div class="skill-domain-header">
+            <div class="skill-domain-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1v0a1 1 0 0 0-1 1v3"/></svg></div>
+            <h4>Biomedical Expertise</h4>
+          </div>
+          <div class="skill-tags-grid">
+            <span class="skill-tag">Biomedical Device Maintenance</span>
+            <span class="skill-tag">Electrical Safety Testing</span>
+            <span class="skill-tag">IEC 60601 Standards</span>
+            <span class="skill-tag">Prosthetics Design</span>
+            <span class="skill-tag">Biomaterials</span>
+            <span class="skill-tag">Electrospinning</span>
+            <span class="skill-tag">Wound Care Engineering</span>
+          </div>
+        </div>
+
+        <div class="skill-domain reveal-up delay-1">
+          <div class="skill-domain-header">
+            <div class="skill-domain-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <h4>Clinical Testing Equipment</h4>
+          </div>
+          <div class="skill-tags-grid">
+            <span class="skill-tag featured-tag">Rigel 288+/ESA</span>
+            <span class="skill-tag featured-tag">Fluke ESA615</span>
+            <span class="skill-tag featured-tag">Fluke Defibrillator Analyzer</span>
+            <span class="skill-tag featured-tag">Fluke BP Pump Analyzer</span>
+          </div>
+        </div>
+
+        <div class="skill-domain reveal-up delay-2">
+          <div class="skill-domain-header">
+            <div class="skill-domain-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></div>
+            <h4>Engineering Tools</h4>
+          </div>
+          <div class="skill-tags-grid">
+            <span class="skill-tag">SolidWorks</span>
+            <span class="skill-tag">Fusion 360</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">LTspice</span>
+            <span class="skill-tag">ImageJ</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+
+        <div class="skill-domain reveal-up delay-3">
+          <div class="skill-domain-header">
+            <div class="skill-domain-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.9 1.15l-2.07-5.11C3.33 11.38 2 8.35 2 6.5 2 4.01 4.01 2 6.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.9 1.15l2.07-5.11C20.67 11.38 22 8.35 22 6.5 22 4.01 19.99 2 17.5 2Z"/></svg></div>
+            <h4>Machine Learning &amp; AI</h4>
+          </div>
+          <div class="skill-tags-grid">
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">scikit-learn</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+
+        <div class="skill-domain reveal-up delay-4">
+          <div class="skill-domain-header">
+            <div class="skill-domain-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+            <h4>Languages</h4>
+          </div>
+          <div class="skill-tags-grid">
+            <span class="skill-tag lang-tag">Arabic <em>(Native)</em></span>
+            <span class="skill-tag lang-tag">English <em>(C1 · IELTS 7.5)</em></span>
+          </div>
+        </div>
+
+        <div class="skill-domain reveal-up delay-5">
+          <div class="skill-domain-header">
+            <div class="skill-domain-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h4>Professional Skills</h4>
+          </div>
+          <div class="skill-tags-grid">
+            <span class="skill-tag">Client Relations</span>
+            <span class="skill-tag">Account Coordination</span>
+            <span class="skill-tag">Technical Documentation</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Team Leadership</span>
+            <span class="skill-tag">Event Operations</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FUTURE VISION -->
+  <section id="vision">
+    <div class="vision-bg"></div>
+    <div class="container">
+      <div class="section-label light reveal-up">Looking Forward</div>
+      <h2 class="section-title light reveal-up">The Future I'm Building</h2>
+      <div class="vision-grid">
+        <div class="vision-card reveal-up">
+          <div class="vision-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.9 1.15l-2.07-5.11C3.33 11.38 2 8.35 2 6.5 2 4.01 4.01 2 6.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.9 1.15l2.07-5.11C20.67 11.38 22 8.35 22 6.5 22 4.01 19.99 2 17.5 2Z"/></svg></div>
+          <h4>Intelligent Clinical Tools</h4>
+          <p>Developing AI-assisted diagnostic and safety systems that reduce clinical error, accelerate assessment, and
+            support clinicians at the point of care from device safety to patient monitoring.</p>
+        </div>
+        <div class="vision-card reveal-up delay-1">
+          <div class="vision-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 7.5a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M10 5.5a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M6 10a2 2 0 0 0-2 2v10a8 8 0 0 0 12.3-6.9L18 11Z"/></svg></div>
+          <h4>Accessible Rehabilitation Tech</h4>
+          <p>Designing affordable, data-driven rehabilitation devices that deliver measurable recovery outcomes —
+            extending the reach of clinical-grade physiotherapy into homes and underserved communities.</p>
+        </div>
+        <div class="vision-card reveal-up delay-2">
+          <div class="vision-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="M9 22c1.798-1.598 3-4.111 3-7.25C12 11.607 10.798 9.094 9 7.5"/><path d="M15 2c-1.798 1.598-3 4.111-3 7.25C12 12.393 13.202 14.906 15 16.5"/><path d="M7 11h10"/><path d="M7 15h10"/><path d="M7 19h10"/><path d="M7 23h10"/></svg></div>
+          <h4>Regenerative Medicine & Biofabrication</h4>
+          <p>Advancing tissue regeneration through electrospun scaffolds, smart wound-healing biomaterials, and scalable biofabrication systems designed for translational clinical impact.</p>
+        </div>
+        <div class="vision-card reveal-up delay-3">
+          <div class="vision-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+          <h4>Healthcare Equity</h4>
+          <p>Every system I build carries a mandate: manufacturable, scalable, and deployable beyond elite institutions
+            — from prosthetics for children in Palestine to diagnostic tools for underserved hospitals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-label reveal-up">Get in Touch</div>
+      <h2 class="section-title reveal-up">Let's build impactful<br />healthcare innovation together.</h2>
+      <p class="section-sub reveal-up">Open to biomedical engineering roles, MedTech collaboration, research
+        opportunities, and impactful healthcare projects across the UAE and beyond.</p>
+      <div class="contact-grid">
+        <div class="contact-info reveal-up">
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></div>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:amrrahmed11@gmail.com" class="contact-link" id="contactEmail">amrrahmed11@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <a href="tel:+971529316509" class="contact-link" id="contactPhone">+971 52 931 6509</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+            <div>
+              <div class="contact-label">LinkedIn</div>
+              <a href="https://linkedin.com/in/amr-ahmed-ismail" target="_blank" rel="noopener" class="contact-link"
+                id="contactLinkedIn">linkedin.com/in/amr-ahmed-ismail</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <div class="contact-label">Location</div>
+              <span class="contact-link">Abu Dhabi, UAE</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+            <div>
+              <div class="contact-label">Education</div>
+              <span class="contact-link">Universiti Teknologi Malaysia (UTM)</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form glass-card reveal-right" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="fname" placeholder="John" required autocomplete="given-name" />
+            </div>
+            <div class="form-group">
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lname" placeholder="Doe" required autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="emailField">Email Address</label>
+            <input type="email" id="emailField" name="email" placeholder="john@company.com" required
+              autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Collaboration opportunity, role inquiry..." required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5"
+              placeholder="Tell me about your project, challenge, or opportunity..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width" id="submitBtn">Send Message</button>
+          <div class="form-success" id="formSuccess">✓ Message sent! I'll respond within 24 hours.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="footer-name">Amr Ahmed Osman</span>
+          <span class="footer-role">Biomedical Engineer · Abu Dhabi, UAE</span>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#volunteering">Volunteering</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-copy">© 2026 Amr Ahmed Osman</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
