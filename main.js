@@ -249,9 +249,7 @@ if (form) {
 
     if (!isValid) return;
 
-    // PASTE_YOUR_FORMSPREE_ENDPOINT_HERE
-    // Replace the string below with your actual Formspree endpoint URL
-    const endpoint = 'PASTE_YOUR_FORMSPREE_ENDPOINT_HERE';
+    const endpoint = 'https://formsubmit.co/ajax/amrrahmed11@gmail.com';
 
     submitBtn.textContent = 'Sending...';
     submitBtn.disabled = true;
@@ -264,25 +262,22 @@ if (form) {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          firstName: fname.value.trim(),
-          lastName: lname.value.trim(),
+          _subject: `Portfolio contact: ${subject.value.trim()}`,
+          name: `${fname.value.trim()} ${lname.value.trim()}`,
           email: emailVal,
           subject: subject.value.trim(),
           message: message.value.trim()
         })
       });
 
-      if (response.ok) {
+      const data = await response.json().catch(() => null);
+
+      if (response.ok && data && String(data.success) === 'true') {
         form.reset();
         formSuccess.classList.add('show');
         setTimeout(() => formSuccess.classList.remove('show'), 5000);
       } else {
-        const data = await response.json();
-        if (data.errors) {
-          showError(message, data.errors.map(err => err.message).join(", "));
-        } else {
-          showError(message, "Oops! There was a problem submitting your form.");
-        }
+        showError(message, "Oops! There was a problem submitting your form.");
       }
     } catch (error) {
       showError(message, "Oops! There was a network error. Please try again later.");
